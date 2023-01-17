@@ -2,10 +2,12 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
-import db from '../utils/db'
+import connectMongoDB from '../utils/connetMongoDB'
 
 const inter = Inter({ subsets: ['latin'] })
-db()
+
+//connect to MongoDB via mongoose
+connectMongoDB()
 
 export default function Home() {
   return (
